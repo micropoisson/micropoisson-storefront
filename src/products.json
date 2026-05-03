@@ -1,0 +1,62 @@
+[
+  {
+    "id": "jg-sardines-evoo",
+    "brand": "José Gourmet",
+    "name": "Sardines in Extra Virgin Olive Oil",
+    "description": "Ces sardines portugaises pêchées à la main sont conservées dans une huile d'olive extra vierge d'une qualité exceptionnelle. Un classique incontournable de Lisbonne.",
+    "price": 16.00,
+    "origin": "Portugal",
+    "image": "https://images.unsplash.com/photo-1599385311090-a2491a182743?w=800&q=80",
+    "category": "Sardines"
+  },
+  {
+    "id": "nuri-spiced-sardines",
+    "brand": "NURI",
+    "name": "Spiced Sardines in Olive Oil",
+    "description": "Préparées selon la même recette artisanale depuis 1920. Chaque boîte contient le juste équilibre de piri-piri, laurier, clou de girofle et poivre noir.",
+    "price": 14.00,
+    "origin": "Portugal",
+    "image": "https://images.unsplash.com/photo-1628186217466-9abaf59b46be?w=800&q=80",
+    "category": "Sardines"
+  },
+  {
+    "id": "armatore-cetara-anchovies",
+    "brand": "Armatore",
+    "name": "Cetara Anchovies in EVOO",
+    "description": "Pêchés à la senne tournante sur la côte amalfitaine et préparés à la main le jour même. Ces anchois charnus sont l'essence pure de la Méditerranée.",
+    "price": 32.00,
+    "origin": "Amalfi Coast, Italy",
+    "image": "https://images.unsplash.com/photo-1620894589945-31ce1d7a3ed1?w=800&q=80",
+    "category": "Anchovies"
+  },
+  {
+    "id": "scout-albacore-tuna",
+    "brand": "Scout Canning",
+    "name": "Wild Albacore Tuna",
+    "description": "Thon blanc germon sauvage pêché de manière responsable sur la côte ouest canadienne, légèrement salé et conservé dans son jus naturel.",
+    "price": 12.00,
+    "origin": "BC, Canada",
+    "image": "https://images.unsplash.com/photo-1598380315252-c65de3bb87c8?w=800&q=80",
+    "category": "Tuna"
+  },
+  {
+    "id": "casa-santona-boquerones",
+    "brand": "Casa Santoña",
+    "name": "Boquerones (White Anchovies)",
+    "description": "Anchois blancs marinés au vinaigre, un classique des tapas espagnoles. Fraîcheur et acidité parfaites pour l'apéro.",
+    "price": 18.00,
+    "origin": "Cantabria, Spain",
+    "image": "https://images.unsplash.com/photo-1606915150893-b68f44d18fae?w=800&q=80",
+    "category": "Anchovies"
+  },
+  {
+    "id": "jose-gourmet-octopus",
+    "brand": "José Gourmet",
+    "name": "Octopus in Olive Oil with Garlic",
+    "description": "Tendres morceaux de poulpe infusés à l'ail et à l'huile d'olive portugaise. Une texture parfaite, prête à déguster.",
+    "price": 24.00,
+    "origin": "Portugal",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80",
+    "category": "Octopus"
+  }
+]
