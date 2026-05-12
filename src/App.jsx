@@ -1,59 +1,72 @@
-import React from 'react'
-import products from './products.json'
+import React, { useState } from 'react'
 import './index.css'
 
 function App() {
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (email) setSubmitted(true)
+  }
+
   return (
-    <>
-      <header className="container">
-        <a href="/" className="brand-logo">MicroPoisson.ca</a>
-        <div className="cart-icon snipcart-checkout">
-          🛒 Cart
-          <span className="snipcart-items-count">0</span>
+    <div className="coming-soon-page">
+      <div className="coming-soon-bg" aria-hidden="true">
+        <div className="bg-circle bg-circle-1" />
+        <div className="bg-circle bg-circle-2" />
+        <div className="bg-circle bg-circle-3" />
+      </div>
+
+      <div className="coming-soon-content">
+        <div className="brand-badge">Bientôt disponible</div>
+
+        <h1 className="coming-soon-title">
+          Micro<span className="title-accent">Poisson</span>.ca
+        </h1>
+
+        <p className="coming-soon-tagline">
+          Conservas artisanales. Luxury affordable. Livré au Québec.
+        </p>
+
+        <p className="coming-soon-sub">
+          We're carefully curating the finest tinned fish from Portugal, Spain, Italy, and Japan —
+          and building something worth waiting for.
+        </p>
+
+        <div className="coming-soon-divider">
+          <span>✦</span>
         </div>
-      </header>
 
-      <main>
-        <section className="hero">
-          <div className="container hero-content">
-            <h1>Artisan Tinned Fish</h1>
-            <p className="subtitle">
-              Curated conservas from the finest maritime producers. Affordable luxury, delivered to your door in Quebec.
-            </p>
+        {!submitted ? (
+          <form className="notify-form" onSubmit={handleSubmit}>
+            <p className="notify-label">Be the first to know when we open.</p>
+            <div className="notify-row">
+              <input
+                id="notify-email"
+                type="email"
+                required
+                placeholder="your@email.com"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                className="notify-input"
+              />
+              <button type="submit" className="notify-btn">Notify me</button>
+            </div>
+          </form>
+        ) : (
+          <div className="notify-success">
+            ✓ &nbsp; You're on the list. We'll be in touch soon.
           </div>
-        </section>
+        )}
 
-        <section className="container">
-          <div className="product-grid">
-            {products.map(product => (
-              <div key={product.id} className="product-card">
-                <img src={product.image} alt={product.name} className="product-image" />
-                <div className="product-info">
-                  <span className="product-brand">{product.brand}</span>
-                  <h3 className="product-name">{product.name}</h3>
-                  <p className="product-desc">{product.description}</p>
-                  
-                  <div className="product-footer">
-                    <span className="product-price">${product.price.toFixed(2)}</span>
-                    <button
-                      className="btn-cart snipcart-add-item"
-                      data-item-id={product.id}
-                      data-item-price={product.price}
-                      data-item-description={product.description}
-                      data-item-image={product.image}
-                      data-item-name={`${product.brand} - ${product.name}`}
-                      data-item-url="/"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-    </>
+        <footer className="coming-soon-footer">
+          <a href="mailto:info@micropoisson.ca">info@micropoisson.ca</a>
+          <span>·</span>
+          <span>Montréal, QC</span>
+        </footer>
+      </div>
+    </div>
   )
 }
 

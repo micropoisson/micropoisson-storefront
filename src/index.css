@@ -225,3 +225,214 @@ header {
   font-size: 0.75rem;
   font-weight: bold;
 }
+
+/* ============================
+   COMING SOON PAGE
+   ============================ */
+
+.coming-soon-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background orbs */
+.coming-soon-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: float 12s ease-in-out infinite;
+}
+
+.bg-circle-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--color-quebec);
+  top: -200px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.bg-circle-2 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-green);
+  bottom: -100px;
+  right: -100px;
+  animation-delay: -4s;
+}
+
+.bg-circle-3 {
+  width: 300px;
+  height: 300px;
+  background: #b08850;
+  top: 50%;
+  left: 55%;
+  animation-delay: -8s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -40px) scale(1.05); }
+  66%       { transform: translate(-20px, 20px) scale(0.97); }
+}
+
+/* Content */
+.coming-soon-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.brand-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--color-green);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+.coming-soon-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  color: var(--color-white);
+  line-height: 1;
+  margin: 0;
+}
+
+.title-accent {
+  color: var(--color-green);
+}
+
+.coming-soon-tagline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.coming-soon-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 480px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.coming-soon-divider {
+  color: rgba(255,255,255,0.2);
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+}
+
+/* Email form */
+.notify-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.notify-label {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.notify-row {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.notify-input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.07);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.notify-input::placeholder { color: rgba(255,255,255,0.3); }
+.notify-input:focus { border-color: var(--color-green); }
+
+.notify-btn {
+  padding: 0.85rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--color-green);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.notify-btn:hover { opacity: 0.85; transform: scale(1.02); }
+
+.notify-success {
+  background: rgba(143, 188, 143, 0.15);
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* Footer */
+.coming-soon-footer {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.coming-soon-footer a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.coming-soon-footer a:hover { color: var(--color-green); }
+
+@media (max-width: 480px) {
+  .notify-row { flex-direction: column; }
+}
